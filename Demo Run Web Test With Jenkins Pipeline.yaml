@@ -1,0 +1,13 @@
+- job:
+    name: Demo Run Web testing with Jenkins Pipeline
+    description: 'Automatically generated test'
+    project-type: pipeline
+    sandbox: true
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://git.teko.vn/qc/serenitydemo.git
+            credentials-id: 16889cd0-f449-4b5d-a42e-3b5743c6d5e0
+            branches:
+               - origin/master
+      script-path: Jenkinsfile
